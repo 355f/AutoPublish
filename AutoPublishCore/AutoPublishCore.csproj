@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>AutoPublishCore</RootNamespace>
+    <AssemblyName>AutoPublishCore</AssemblyName>
+    <Version>0.1.0</Version>
+    <Description>通用 Windows 界面自动化核心库：流程录制 + 数据驱动回放（UIA）。</Description>
+    <PackageId>AutoPublishCore</PackageId>
+    <Authors>dpWork</Authors>
+    <PackageTags>automation;uia;workflow;recorder;windows</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!--
+    命名空间保持 AutoPublishNet.* 以兼容从 AutoPublishNet 拆出的既有代码；
+    后续迭代可整体重命名为 AutoPublishCore.*（IDE 重命名即可）。
+    领域步骤（Search/SelectTheme/CheckFiles 等）在 UiaTarget/StepExecutor 中以
+    "主题模板发布参考实现" 形式保留，通用部分可直接复用。
+  -->
+
+</Project>

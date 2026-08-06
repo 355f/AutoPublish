@@ -1,0 +1,23 @@
+# ---- .NET 构建产物 ----
+bin/
+obj/
+dist/
+publish/
+
+# ---- NuGet ----
+packages/
+*.nupkg
+
+# ---- IDE / 工具 ----
+.vs/
+.idea/
+*.user
+*.suo
+
+# ---- 运行时数据 ----
+结果记录/
+workflow.json
+
+# ---- 系统 ----
+Thumbs.db
+.DS_Store
