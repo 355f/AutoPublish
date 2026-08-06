@@ -36,7 +36,7 @@
             <Setter Property="Background" Value="#CCFFFFFF" />
             <Setter Property="BorderBrush" Value="{StaticResource BorderGlassBrush}" />
             <Setter Property="Cursor" Value="Hand" />
-            <Setter Property="Padding" Value="12,5" />
+            <Setter Property="Padding" Value="18,8" />
             <Setter Property="FontSize" Value="13" />
             <Setter Property="Template">
                 <Setter.Value>
@@ -75,7 +75,7 @@
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="FontSize" Value="15" />
             <Setter Property="Cursor" Value="Hand" />
-            <Setter Property="Padding" Value="24,7" />
+            <Setter Property="Padding" Value="30,9" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">

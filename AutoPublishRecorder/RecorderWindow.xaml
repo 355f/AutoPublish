@@ -128,7 +128,7 @@
                                         </StackPanel>
                                         <StackPanel Grid.Column="2" Orientation="Horizontal">
                                             <Button Content="@主题" Click="SetToTheme_Click"
-                                                    Padding="7,1" Margin="2,0" FontSize="11"
+                                                    Padding="9,2" Margin="2,0" FontSize="11"
                                                     ToolTip="把该步骤的值设为 @theme（多主题发布时每轮自动注入当前主题，并开启回车提交）">
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -142,7 +142,7 @@
                                                 </Button.Style>
                                             </Button>
                                             <Button Content="✕" Click="DeleteStep_Click"
-                                                    Padding="7,1" Margin="2,0" FontSize="11" ToolTip="删除该步骤" />
+                                                    Padding="9,2" Margin="2,0" FontSize="11" ToolTip="删除该步骤" />
                                         </StackPanel>
                                     </Grid>
                                 </DataTemplate>
@@ -165,12 +165,12 @@
                     <TextBox x:Name="WaitSecBox" Width="44" Margin="6,0,4,0" Text="2" />
                     <TextBlock Text="秒" VerticalAlignment="Center" FontSize="13"
                                Foreground="{StaticResource SubTextBrush}" Margin="0,0,8,0" />
-                    <Button Content="插入等待" Click="InsertWait_Click" Padding="10,4" FontSize="12" Margin="0,0,6,0" />
-                    <Button Content="插入结果检测" Click="InsertDetect_Click" Padding="10,4" FontSize="12" Margin="0,0,6,0"
+                    <Button Content="插入等待" Click="InsertWait_Click" Padding="15,6" FontSize="12" Margin="0,0,8,0" />
+                    <Button Content="插入结果检测" Click="InsertDetect_Click" Padding="15,6" FontSize="12" Margin="0,0,8,0"
                             ToolTip="录制发布动作后手动插入：检测目标程序界面变化判定完成" />
-                    <Button Content="合并勾选→CheckFiles" Click="MergeToggles_Click" Padding="10,4" FontSize="12" Margin="0,0,6,0"
+                    <Button Content="合并勾选→CheckFiles" Click="MergeToggles_Click" Padding="15,6" FontSize="12" Margin="0,0,8,0"
                             ToolTip="把连续录制的树节点 Toggle 合并为一个 CheckFiles 步骤：读整棵树勾选、自动展开父目录、缺失文件宽容（不同主题文件结构不同时更稳）" />
-                    <Button Content="清空" Click="Clear_Click" Padding="10,4" FontSize="12"
+                    <Button Content="清空" Click="Clear_Click" Padding="15,6" FontSize="12"
                             ToolTip="清空已录制的步骤" />
                 </StackPanel>
                 <TextBlock Grid.Column="1" Text="提示: 点按钮/列表项=Click · 点复选框=Toggle · Ctrl+点树节点=Expand · 输入后按 Enter/Tab=SetValue"
