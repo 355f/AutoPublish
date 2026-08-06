@@ -21,3 +21,6 @@ workflow.json
 # ---- 绯荤粺 ----
 Thumbs.db
 .DS_Store
+
+# 发布压缩包(走 GitHub Releases,不进仓库)
+*.zip
