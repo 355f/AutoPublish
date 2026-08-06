@@ -6,6 +6,18 @@
 基于真实生产工具(主题模板批量发布,数千主题连续发布)提炼的通用引擎,
 **不绑定任何特定程序**——目标程序换成任意 Windows 应用都能用。
 
+## 获取方式
+
+**使用者(不想碰代码)**:去仓库 **Releases** 页面下载 `AutoPublish-工具包-v0.1.0.zip`(含录制器 + 命令行工具 + 使用说明),按包内「使用说明.txt」操作即可。需要本机安装 .NET 8 Desktop Runtime。
+
+**开发者**:克隆源码自行构建:
+
+```bash
+git clone git@github.com:355f/AutoPublish.git
+dotnet build AutoPublishRecorder   # 录制器
+dotnet publish AutoPublishCore.Cli -c Release -r win-x64 -o dist   # 命令行工具
+```
+
 ## 组成
 
 | 项目 | 说明 |
