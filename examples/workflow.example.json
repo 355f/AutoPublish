@@ -1,0 +1,11 @@
+{
+  "name": "订单导出示例",
+  "windowTitle": "订单管理",
+  "steps": [
+    { "kind": "SetValue", "locator": "id=txtOrderNo", "value": "@orderno", "pressEnter": false },
+    { "kind": "Click", "locator": "id=btnSearch" },
+    { "kind": "Wait", "timeoutSec": 2 },
+    { "kind": "Click", "locator": "id=btnExport" },
+    { "kind": "DetectResult", "timeoutSec": 30 }
+  ]
+}
