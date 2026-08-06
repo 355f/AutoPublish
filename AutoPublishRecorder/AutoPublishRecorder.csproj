@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>AutoPublishRecorder</AssemblyName>
+    <RootNamespace>AutoPublishRecorder</RootNamespace>
+    <Version>0.1.0</Version>
+    <Description>AutoPublish 流程录制器：操作目标程序一遍，生成 workflow.json。</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoPublishCore\AutoPublishCore.csproj" />
+  </ItemGroup>
+
+</Project>
