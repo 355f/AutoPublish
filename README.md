@@ -12,6 +12,7 @@
 |---|---|
 | **AutoPublishCore** | 核心库(UIA 驱动):数据驱动回放引擎 + 流程录制组件 |
 | **AutoPublishCore.Cli** | 命令行工具 `autopublish`:流程 + 数据表批量回放 |
+| **AutoPublishRecorder** | 独立录制器(WPF):操作目标程序一遍,自动生成 workflow.json(无需 AutoPublishNet) |
 
 ## 核心概念
 
