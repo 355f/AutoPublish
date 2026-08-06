@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Windows;
 using System.Windows.Input;
+using AutoPublishCore.Core;
 using AutoPublishCore.Models;
 
 namespace AutoPublishRecorder;
@@ -23,6 +24,7 @@ public partial class WorkflowEditorWindow : Window
     public WorkflowEditorWindow(WorkflowDefinition? workflow)
     {
         InitializeComponent();
+        WindowMaximizeHelper.Attach(this);
         AddKindBox.ItemsSource = Enum.GetValues<StepKind>();
         AddKindBox.SelectedIndex = 0;
         LoadFrom(workflow ?? ConfigStore.LoadWorkflow());

@@ -86,6 +86,7 @@ public partial class RecorderWindow : Window
     public RecorderWindow()
     {
         InitializeComponent();
+        WindowMaximizeHelper.Attach(this);
         StepList.ItemsSource = _steps;
     }
 

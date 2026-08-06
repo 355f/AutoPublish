@@ -79,7 +79,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border x:Name="Bd" CornerRadius="9" BorderThickness="1"
+                        <Border x:Name="Bd" CornerRadius="9" BorderThickness="1" Padding="{TemplateBinding Padding}"
                                 BorderBrush="#FF4E9FE6" Effect="{StaticResource SoftShadow}">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
