@@ -131,8 +131,7 @@
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="1.2"
                                 CornerRadius="10"
-                                Padding="{TemplateBinding Padding}"
-                                Effect="{StaticResource SoftShadow}">
+                                Padding="{TemplateBinding Padding}">
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"
                                               TextElement.Foreground="{TemplateBinding Foreground}" />
@@ -389,8 +388,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="CheckBox">
                         <Border x:Name="Card" Background="#F2F5F9" CornerRadius="10"
-                                BorderBrush="#E6EAF2" BorderThickness="1"
-                                Effect="{StaticResource SoftShadow}">
+                                BorderBrush="#E6EAF2" BorderThickness="1">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
                                               TextElement.Foreground="{TemplateBinding Foreground}" />
                         </Border>
@@ -398,7 +396,6 @@
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter TargetName="Card" Property="Background" Value="{StaticResource BrandGradient}" />
                                 <Setter TargetName="Card" Property="BorderBrush" Value="#66FFFFFF" />
-                                <Setter TargetName="Card" Property="Effect" Value="{StaticResource BrandShadow}" />
                                 <Setter Property="Foreground" Value="White" />
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
