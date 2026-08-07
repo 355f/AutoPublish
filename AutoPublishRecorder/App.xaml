@@ -242,6 +242,36 @@
             </Setter>
         </Style>
 
+        <!-- Hero 按钮(渐变头部上的操作按钮:未悬停白字,悬停白底+品牌蓝字) -->
+        <Style x:Key="HeroButton" TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Padding" Value="15,6" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="#26FFFFFF" BorderBrush="#66FFFFFF"
+                                BorderThickness="1" CornerRadius="10" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              TextElement.Foreground="{TemplateBinding Foreground}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FFFFFF" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#FFFFFF" />
+                                <Setter Property="Foreground" Value="#1FA6E8" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#E8F5FD" />
+                                <Setter Property="Foreground" Value="#1789C7" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <!-- ======================= 标题栏按钮 ======================= -->
         <Style x:Key="CaptionButton" TargetType="Button">
             <Setter Property="Width" Value="44" />
