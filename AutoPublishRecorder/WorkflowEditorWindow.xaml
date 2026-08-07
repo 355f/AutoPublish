@@ -73,7 +73,7 @@
 
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14,0,0,0" VerticalAlignment="Center">
                 <Border Width="22" Height="22" CornerRadius="7"
-                        Background="{StaticResource BrandGradient}" Effect="{StaticResource SoftShadow}">
+                        Background="{StaticResource BrandGradient}" >
                     <TextBlock Text="&#xE70F;" FontFamily="Segoe MDL2 Assets" FontSize="11"
                                Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Border>

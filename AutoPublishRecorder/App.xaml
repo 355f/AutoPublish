@@ -102,12 +102,7 @@
             </Setter>
             <Setter Property="BorderThickness" Value="1.5" />
             <Setter Property="CornerRadius" Value="16" />
-            <Setter Property="Effect">
-                <Setter.Value>
-                    <DropShadowEffect BlurRadius="24" ShadowDepth="8" Direction="270"
-                                      Color="#1A2333" Opacity="0.10" />
-                </Setter.Value>
-            </Setter>
+            
         </Style>
 
         <!-- ======================= 通用 Button(液态玻璃次按钮) ======================= -->
@@ -171,10 +166,7 @@
                                     <GradientStop Color="#31C6E0" Offset="1" />
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Border.Effect>
-                                <DropShadowEffect BlurRadius="14" ShadowDepth="6"
-                                                  Direction="270" Opacity="0.35" Color="#1FA6E8" />
-                            </Border.Effect>
+                            
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"
                                               TextElement.Foreground="White" />
@@ -214,10 +206,7 @@
                                     <GradientStop Color="#FFB347" Offset="1" />
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Border.Effect>
-                                <DropShadowEffect BlurRadius="14" ShadowDepth="6"
-                                                  Direction="270" Opacity="0.32" Color="#FF8719" />
-                            </Border.Effect>
+                            
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"
                                               TextElement.Foreground="White" />
