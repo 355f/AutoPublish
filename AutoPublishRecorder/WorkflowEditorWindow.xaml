@@ -31,11 +31,12 @@
     </Window.Resources>
 
     <Grid TextElement.Foreground="{StaticResource TextBrush}">
+        <!-- 背景：清新渐变 + 光斑（液态玻璃透出颜色） -->
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#D8F3FAFF" Offset="0" />
-                <GradientStop Color="#CCE4F4FF" Offset="0.5" />
-                <GradientStop Color="#D6EDFBFF" Offset="1" />
+                <GradientStop Color="#F0F8FE" Offset="0" />
+                <GradientStop Color="#E8F5FB" Offset="0.5" />
+                <GradientStop Color="#ECF9F7" Offset="1" />
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -44,6 +45,23 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
+
+        <Ellipse Width="420" Height="420" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-160,0,0,-140">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#59A8E8D2" Offset="0" />
+                    <GradientStop Color="#00A8E8D2" Offset="1" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Width="440" Height="440" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,-160,-120">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#59A8CCFF" Offset="0" />
+                    <GradientStop Color="#00A8CCFF" Offset="1" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
 
         <!-- ===================== 自绘标题栏 ===================== -->
         <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseDown">
@@ -55,7 +73,7 @@
 
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14,0,0,0" VerticalAlignment="Center">
                 <Border Width="22" Height="22" CornerRadius="7"
-                        Background="{StaticResource AccentBrush}" Effect="{StaticResource SoftShadow}">
+                        Background="{StaticResource BrandGradient}" Effect="{StaticResource SoftShadow}">
                     <TextBlock Text="&#xE70F;" FontFamily="Segoe MDL2 Assets" FontSize="11"
                                Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Border>
@@ -125,9 +143,9 @@
                     <DataGrid x:Name="StepsGrid" Grid.Row="1"
                               AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
                               HeadersVisibility="Column" GridLinesVisibility="Horizontal"
-                              HorizontalGridLinesBrush="#338FC8F0" VerticalGridLinesBrush="Transparent"
+                              HorizontalGridLinesBrush="#221FA6E8" VerticalGridLinesBrush="Transparent"
                               Background="#99FFFFFF" BorderBrush="{StaticResource BorderGlassBrush}" BorderThickness="1"
-                              RowBackground="Transparent" AlternatingRowBackground="#338FC8F0"
+                              RowBackground="Transparent" AlternatingRowBackground="#1A1FA6E8"
                               RowHeight="34" ColumnHeaderHeight="30"
                               SelectionMode="Single" SelectionUnit="FullRow"
                               Foreground="{StaticResource TextBrush}" FontSize="13">
@@ -228,14 +246,15 @@
             </Grid>
 
             <!-- 状态提示 -->
-            <Border Grid.Row="3" Margin="0,10,0,0" Background="#338FC8F0" CornerRadius="8" Padding="10,6">
+            <Border Grid.Row="3" Margin="0,10,0,0" Background="{StaticResource AccentSoftBrush}" CornerRadius="10" Padding="12,8"
+                    BorderBrush="{StaticResource AccentBorderBrush}" BorderThickness="1">
                 <TextBlock x:Name="StatusText" Text="" FontSize="12"
-                           Foreground="{StaticResource SubTextBrush}" TextWrapping="Wrap" />
+                           Foreground="{StaticResource AccentDeepBrush}" TextWrapping="Wrap" />
             </Border>
         </Grid>
 
         <!-- ===================== 底部状态栏 ===================== -->
-        <Border Grid.Row="2" Background="#66FFFFFF" BorderThickness="0,1,0,0" BorderBrush="#3380C8FF">
+        <Border Grid.Row="2" Background="#59FFFFFF" BorderThickness="0,1,0,0" BorderBrush="#331FA6E8">
             <TextBlock Margin="16,0" Text="保存后下次点击「开始发布」即按新流程执行"
                        FontSize="12" VerticalAlignment="Center" Foreground="{StaticResource SubTextBrush}" />
         </Border>

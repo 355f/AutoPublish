@@ -15,11 +15,12 @@
     </WindowChrome.WindowChrome>
 
     <Grid TextElement.Foreground="{StaticResource TextBrush}">
+        <!-- 背景：清新渐变 + 光斑（液态玻璃透出颜色，右橙左蓝呼应录制语义） -->
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#D8F3FAFF" Offset="0" />
-                <GradientStop Color="#CCE4F4FF" Offset="0.5" />
-                <GradientStop Color="#D6EDFBFF" Offset="1" />
+                <GradientStop Color="#F0F8FE" Offset="0" />
+                <GradientStop Color="#E8F5FB" Offset="0.5" />
+                <GradientStop Color="#FDF6F0" Offset="1" />
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -28,6 +29,23 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
+
+        <Ellipse Width="420" Height="420" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,-160,-140">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#59FFB877" Offset="0" />
+                    <GradientStop Color="#00FFB877" Offset="1" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Width="400" Height="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-140,80,0,-120">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#59A8CCFF" Offset="0" />
+                    <GradientStop Color="#00A8CCFF" Offset="1" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
 
         <!-- ===================== 自绘标题栏 ===================== -->
         <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseDown">
@@ -39,7 +57,7 @@
 
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14,0,0,0" VerticalAlignment="Center">
                 <Border Width="22" Height="22" CornerRadius="7"
-                        Background="{StaticResource AccentBrush}" Effect="{StaticResource SoftShadow}">
+                        Background="{StaticResource RecordGradient}" Effect="{StaticResource SoftShadow}">
                     <TextBlock Text="&#xE895;" FontFamily="Segoe MDL2 Assets" FontSize="11"
                                Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Border>
@@ -85,12 +103,15 @@
                              Text="主题模板发布"
                              ToolTip="只录制该标题窗口内的操作（模糊匹配）" />
                     <Button Grid.Column="2" x:Name="StartBtn" Content="开始录制"
-                            Style="{StaticResource PrimaryButton}" Click="Start_Click" />
+                            Style="{StaticResource RecordButton}" Click="Start_Click" />
                     <Button Grid.Column="3" x:Name="StopBtn" Content="停止" Margin="10,0,0,0"
                             IsEnabled="False" Click="Stop_Click" />
-                    <TextBlock Grid.Column="4" x:Name="RecordStatus" Text="就绪 — 输入目标窗口标题后点击「开始录制」"
-                               HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12"
-                               Foreground="{StaticResource SubTextBrush}" />
+                    <Border Grid.Column="4" Background="#1A1FA6E8" CornerRadius="999" Padding="12,5"
+                            HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock x:Name="RecordStatus" Text="就绪 — 输入目标窗口标题后点击「开始录制」"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="11"
+                                   Foreground="{StaticResource AccentDeepBrush}" />
+                    </Border>
                 </Grid>
             </Border>
 
@@ -103,7 +124,7 @@
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="录制的步骤（自上而下依次执行）" FontSize="12" FontWeight="Bold"
                                Foreground="{StaticResource SubTextBrush}" Margin="2,0,0,6" />
-                    <Border Grid.Row="1" Background="#66FFFFFF" CornerRadius="10" Padding="4">
+                    <Border Grid.Row="1" Background="#59FFFFFF" CornerRadius="12" Padding="4">
                         <ListBox x:Name="StepList" Background="Transparent" BorderThickness="0"
                                  Foreground="{StaticResource TextBrush}" FontSize="13"
                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
@@ -182,7 +203,7 @@
         </Grid>
 
         <!-- ===================== 底部状态栏 ===================== -->
-        <Border Grid.Row="2" Background="#66FFFFFF" BorderThickness="0,1,0,0" BorderBrush="#3380C8FF">
+        <Border Grid.Row="2" Background="#59FFFFFF" BorderThickness="0,1,0,0" BorderBrush="#331FA6E8">
             <TextBlock x:Name="BottomText" Margin="16,0" Text="多主题发布: 把「主题搜索」步骤点「@主题」设为 @theme，每轮自动注入当前主题；发布动作请确认录到了 Click（弹窗/确认框也会录制）"
                        FontSize="12" VerticalAlignment="Center" Foreground="{StaticResource SubTextBrush}" />
         </Border>
